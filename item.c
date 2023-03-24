@@ -44,6 +44,10 @@ int main(int argc, char const *argv[])
     /* Allocating memory for the .itemName string */
     itemInst.itemName = (char *)malloc(32*sizeof(char));
 
+    /* Check if the memory allocation was successful*/
+    if(!itemInst.itemName)
+        exit(-1);
+
     /* Invoking the readItem() for reading the required data */
     readItem(&itemInst);
 
@@ -88,7 +92,7 @@ void readItem(item_t *itemPtr)
  */
 void printItem(item_t *itemPtr)
 {
-    printf("\n\t\t********** Item data **********\n\n\tItem name: %s\n\tItem quantity: %d\n\tItem price: %.2f\n\tItem amount: %.2f\n\n", 
+    printf("\n\t********** Item data **********\n\n\tItem name: %s\n\tItem quantity: %d\n\tItem price: %.2f\n\tItem amount: %.2f\n\n", 
             itemPtr->itemName, 
             itemPtr->quantity,
             itemPtr->price,
