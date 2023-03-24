@@ -7,9 +7,8 @@
 int main(int argc, char const *argv[])
 {
     FILE *fp;
-    int c;
-    char str[64];
-
+    int len;
+    
     fp = fopen("text.txt", "r");
 
     if(!fp)
@@ -18,11 +17,14 @@ int main(int argc, char const *argv[])
         return -1;
     }
 
-    if (fgets(str, 64, fp) != NULL)
-        printf("%s", str);
+    fseek(fp, 0, SEEK_END);
+
+    len = ftell(fp);
 
     fclose(fp);
     fp = NULL;
+
+    printf("The total size of text.txt is : %d bytes\n", len);
 
     return 0;
 }
