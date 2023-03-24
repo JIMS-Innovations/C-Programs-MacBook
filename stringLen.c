@@ -13,6 +13,7 @@
 /* Including necessary libraries */
 #include <stdio.h>
 #include <stddef.h>
+#include <stdlib.h>
 
 /* Function prototype */
 int my_strlen(char *);
