@@ -36,9 +36,7 @@ int main(int argc, char const *argv[])
 
     printf("Please enter your name : ");
     scanf(" ");
-    fgets(buffer, 64, stdin);
-
-    strcpy(Employee_2.name, buffer);
+    fgets(Employee_2.name, 32, stdin);
 
     printf("Please enter your hire date (dd/mm/yyyy): ");
     scanf("%d/%d/%d", &Employee_2.hireDate[0], &Employee_2.hireDate[1], &Employee_2.hireDate[2]);
