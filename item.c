@@ -25,18 +25,29 @@ struct item
 
 typedef struct item item_t;
 
+/* Function prototypes */
 void readItem(item_t *);
 void printItem(item_t *);
 
-
+/**
+ * @brief   This is the main function
+ * 
+ * @param argc 
+ * @param argv 
+ * @return int 
+ */
 int main(int argc, char const *argv[])
 {
+    /* Creating an item_t instance */
     item_t itemInst;
 
+    /* Allocating memory for the .itemName string */
     itemInst.itemName = (char *)malloc(32*sizeof(char));
 
+    /* Invoking the readItem() for reading the required data */
     readItem(&itemInst);
 
+    /* Printing the allocated data */
     printItem(&itemInst);
 
     /* Freeing allocated memory */
