@@ -26,18 +26,12 @@ struct employee
 
 typedef struct employee employee_t;
 
-employee_t Employee_1;
+employee_t Employee_1 = {"John Samuel", {1, 1, 2020}, 500};
 employee_t Employee_2;
 
 
 int main(int argc, char const *argv[])
-{
-    strcpy(Employee_1.name, "John Samuel");
-    Employee_1.hireDate[0] = 1;
-    Employee_1.hireDate[1] = 1;
-    Employee_1.hireDate[2] = 2020;
-    Employee_1.salary = 500;
-    
+{ 
     char buffer[64];
 
     printf("Please enter your name : ");
