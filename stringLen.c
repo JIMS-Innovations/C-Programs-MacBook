@@ -17,6 +17,13 @@
 /* Function prototype */
 int my_strlen(char *);
 
+/**
+ * @brief This is the main function
+ * 
+ * @param argc 
+ * @param argv 
+ * @return int 
+ */
 int main(int argc, char const *argv[])
 {
     printf(" The length of string \"Hello\" is : %d \n", my_strlen("Hello"));
@@ -28,6 +35,7 @@ int main(int argc, char const *argv[])
  *  string length using pointer arithmetic
  * 
  * @param string 
+ * @return int
  */
 int my_strlen(char *string)
 {
