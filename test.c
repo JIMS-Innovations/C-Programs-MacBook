@@ -8,6 +8,7 @@ int main(int argc, char const *argv[])
 {
     FILE *fp;
     int c;
+    char str[64];
 
     fp = fopen("text.txt", "r");
 
@@ -17,8 +18,8 @@ int main(int argc, char const *argv[])
         return -1;
     }
 
-    while ((c = fgetc(fp)) != EOF)
-        printf("%c", c);
+    if (fgets(str, 64, fp) != NULL)
+        printf("%s", str);
 
     fclose(fp);
     fp = NULL;
