@@ -3,29 +3,18 @@
 #include <string.h>
 
 /* Function prototype */
-uint8_t* my_memmove(uint8_t *src, uint8_t *dst, size_t length);
+void my_square(int *);
 
 int main(int argc, char const *argv[])
 {
-    char *text1 = "Hello world!!!";
-    char *text2 = (char *)malloc(15*sizeof(char));
-
-    my_memmove((uint8_t*)text1, (uint8_t*)text2, 15);
-
-    printf("%s \n", text2);
-   
+    int num = 2;
+    my_square(&num);
+    printf("2 * 2 = %d \n", num);
 
     return 0;
 }
 
-uint8_t* my_memmove(uint8_t *src, uint8_t *dst, size_t length)
+void my_square(int *ptr)
 {
-    for (int i = 0; i < length; i++)
-    {
-        *(dst + i) = *(src + i);
-    }
-
-
-
-    return dst;
+    *ptr *= *ptr;
 }
