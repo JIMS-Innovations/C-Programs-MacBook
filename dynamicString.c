@@ -27,7 +27,7 @@ int main(int argc, char const *argv[])
     string = (char *)malloc( nChar * sizeof(char));
     
     /* Check if memory was allocated successfully*/
-    if(string == NULL)
+    if(string == NULL) 
         return -1;
 
     printf("Enter your string: ");
