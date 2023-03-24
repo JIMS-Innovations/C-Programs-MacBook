@@ -2,21 +2,26 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* Function prototype */
-void my_square(int *);
+
 
 int main(int argc, char const *argv[])
 {
-    int num = 9;
+    FILE *fp;
+    int c;
 
-    my_square(&num);
+    fp = fopen("text.txt", "r");
 
-    printf("9 * 9 = %d \n", num);
+    if(!fp)
+    {
+        perror("Error opening file!");
+        return -1;
+    }
+
+    while ((c = fgetc(fp)) != EOF)
+        printf("%c", c);
+
+    fclose(fp);
+    fp = NULL;
 
     return 0;
-}
-
-void my_square(int *ptr)
-{
-    *ptr *= *ptr;
 }
