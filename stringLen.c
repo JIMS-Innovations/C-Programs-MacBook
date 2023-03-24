@@ -16,7 +16,7 @@
 #include <stdlib.h>
 
 /* Function prototype */
-int my_strlen(char *);
+int my_strlen(const char *);
 
 /**
  * @brief This is the main function
@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
  * @param string 
  * @return int
  */
-int my_strlen(char *string)
+int my_strlen(const char *string)
 {
     int length = 0;
     const char *const pFirst  = string;
