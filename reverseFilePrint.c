@@ -13,6 +13,9 @@
 /* Including necessary files */
 #include <stdio.h>
 
+/* Definitions */
+#define FILENAME "text.txt"
+
 
 int main(void)
 {
@@ -20,9 +23,9 @@ int main(void)
     FILE *fp;
 
     /* Opening file in read only mode */
-    fp = fopen("text.txt", "r");
+    fp = fopen(FILENAME, "r");
     
-    /* Checking if file opene successfully */
+    /* Checking if file opened successfully */
     if(!fp)
         return -1;
 
@@ -40,7 +43,7 @@ int main(void)
     }
     
     /* Print current position */
-    printf("\n%d\n", end);
+    printf("\n\n%d\n", end);
 
     /* Close file */
     fclose(fp);
