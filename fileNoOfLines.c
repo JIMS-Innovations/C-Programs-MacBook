@@ -42,7 +42,7 @@ int main(void)
     fp = NULL;
 
     /* Printing the result to output stream */
-    printf("The number of lines present in the file is : %d\n", count);
+    printf("The number of lines present in the file is : %d\n", ++count);
     
     return 0;
 }
