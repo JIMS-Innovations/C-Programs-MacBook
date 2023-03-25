@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
     while ((charBuf = fgetc(fp)) != EOF )
     {
         if (charBuf == '\n')
-            count++;
+            ++count;
     }
     
     /* Closing the file */
