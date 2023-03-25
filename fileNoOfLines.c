@@ -14,7 +14,7 @@
 #include <stdio.h>
 
 
-int main(int argc, char const *argv[])
+int main(void)
 {
     /* Opening the file and assigning file pointer */
     FILE *fp = fopen("text.txt", "r");
