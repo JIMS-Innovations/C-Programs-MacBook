@@ -26,18 +26,23 @@ int main(void)
     if(!fp)
         return -1;
 
+    /* Seek the end of file*/
     fseek(fp, 0, SEEK_END);
 
+    /* Get current position */
     long end = ftell(fp);
 
+    /* Print contents of the file while seeking to the start of file*/
     while ((end--) > 0)
     {
         fseek(fp, end, SEEK_SET);
         fputc(fgetc(fp), stdout);
     }
     
+    /* Print current position */
     printf("\n%d\n", end);
 
+    /* Close file */
     fclose(fp);
     fp = NULL;
 
